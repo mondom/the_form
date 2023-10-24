@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(149.3, 80.4%, 90%);
+}
+body .wrapper {
+  width: 500px;
+  box-shadow: 0 0 10px;
+  background-color: hsl(0, 0%, 100%);
+}
+body form {
+  padding: 35px;
+  font-size: 16px;
+}
+body form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: hsl(176, 54%, 29%);
+}
+body form .form-box {
+  margin-bottom: 18px;
+}
+body form .form-box label {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+body form .form-box label i {
+  color: hsl(176, 54%, 29%);
+}
+body form .form-box input {
+  padding: 5px;
+  width: 90%;
+  margin-bottom: 6px;
+  border: none;
+  border-bottom: 2px solid hsl(176, 54%, 29%);
+}/*# sourceMappingURL=main.css.map */

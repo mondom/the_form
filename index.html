@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the_form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f234464579.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form>
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="circle circle-three"></div>
+            <div class="circle circle-four"></div>
+            <div class="circle circle-five"></div>
+            <div class="circle circle-six"></div>
+            <h1>Create your account</h1>
+
+            <div class="form-box">
+                <label for="username"><i class="fa-solid fa-user"></i> Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+                <p>Error</p>
+            </div>
+
+            <div class="form-box">
+                <label for="mail"><i class="fa-solid fa-at"></i> E-mail address:</label>
+                <input type="email" id="mail" placeholder="Enter e-mail address">
+                <p>Error</p>
+            </div>
+            <div class="form-box">
+                <label for="phone"><i class="fa-solid fa-mobile-screen-button"></i> Phone number:</label>
+                <input type="tel" id="phone" placeholder="Enter phone number">
+                <p>Error</p>
+            </div>
+            <div class="form-box">
+                <label for="password"><i class="fa-solid fa-lock"></i> Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <p>Error</p>
+            </div>
+            <div class="form-box">
+                <label for="password-two"><i class="fa-solid fa-lock"></i> Repeat password:</label>
+                <input type="password" id="password-two" placeholder="Podaj nazwę użytkownika">
+                <p>The password does not match!</p>
+            </div>
+
+            <div>
+                <input type="checkbox" id="regulations">
+                <label for="regulations">Accept the terms and conditions</label>
+                <p>Error</p>
+            </div>
+
+            <div class="buttons-box">
+                <button class="clear">Clear</button>
+                <button class="send">Send</button>
+            </div>
+
+            <div class="security-label">100% security</div>
+
+            <div class="popup">
+                <p>The form has been sent correctly</p>
+                <button class="close-popup">Close</button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

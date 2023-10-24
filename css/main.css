@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,30 +17,156 @@ body .wrapper {
   width: 500px;
   box-shadow: 0 0 10px;
   background-color: hsl(0, 0%, 100%);
+  margin: 15px;
+  border-radius: 5px;
 }
-body form {
+body .wrapper form {
+  border: 2px solid rgb(149, 149, 149);
+  margin: 12px;
   padding: 35px;
   font-size: 16px;
+  border-radius: 5px;
 }
-body form h1 {
+body .wrapper form h1 {
+  position: relative;
+  padding: 0 32px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 10px;
   color: hsl(176, 54%, 29%);
 }
-body form .form-box {
+body .wrapper form h1 .first-letter,
+body .wrapper form h1 .last-letter {
+  position: relative;
+}
+body .wrapper form h1 .first-letter::after,
+body .wrapper form h1 .last-letter::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  content: "";
+  background-color: hsl(158, 26%, 56%);
+  border-radius: 50%;
+  bottom: 16px;
+}
+body .wrapper form h1 .first-letter::after {
+  left: -32px;
+}
+body .wrapper form h1 .last-letter::after {
+  right: -32px;
+}
+body .wrapper form .form-box {
   margin-bottom: 18px;
 }
-body form .form-box label {
+body .wrapper form .form-box label {
   display: inline-block;
   margin-bottom: 6px;
 }
-body form .form-box label i {
-  color: hsl(176, 54%, 29%);
-}
-body form .form-box input {
+body .wrapper form .form-box input {
   padding: 5px;
   width: 90%;
   margin-bottom: 6px;
+  font-size: 16px;
   border: none;
   border-bottom: 2px solid hsl(176, 54%, 29%);
+}
+body .wrapper form .form-box input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px hsla(176, 54%, 29%, 0.25);
+}
+body .wrapper form .form-box .bug-text {
+  text-align: center;
+  font-size: 15px;
+  color: hsl(164, 83%, 14%);
+  visibility: hidden;
+}
+body .wrapper form .form-box.bug input {
+  background-color: hsla(176, 54%, 29%, 0.15);
+}
+body .wrapper form .form-box.bug .bug-text {
+  visibility: visible;
+}
+body .wrapper form .checkbox {
+  margin: 20px 0;
+}
+body .wrapper form .checkbox .checkbox-text {
+  padding: 0 5px;
+  font-weight: bold;
+  color: hsl(240, 3%, 23%);
+}
+body .wrapper form .checkbox .bug-text {
+  text-align: center;
+  font-size: 15px;
+  color: hsl(164, 83%, 14%);
+  visibility: hidden;
+}
+body .wrapper form .checkbox.bug .checkbox-text {
+  text-decoration: underline;
+  color: hsl(164, 83%, 14%);
+}
+body .wrapper form .checkbox.bug .bug-text {
+  visibility: visible;
+}
+body .wrapper form .buttons-box {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .wrapper form .popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: -300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  height: 250px;
+  background-color: hsl(0, 0%, 100%);
+  border: 3px solid hsl(176, 54%, 29%);
+  box-shadow: 0 0 10px;
+  border-radius: 8px;
+}
+body .wrapper form .popup .confirm {
+  text-align: center;
+}
+body .wrapper form .popup .close-popup {
+  margin: 15px 0;
+}
+body .wrapper form button {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 3px solid hsl(158, 70%, 39%);
+  font-size: 16px;
+  background: none;
+  color: hsl(0, 0%, 1%);
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+body .wrapper form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px hsla(176, 54%, 29%, 0.25);
+}
+body .wrapper form button:hover {
+  background-color: hsla(158, 70%, 39%, 0.632);
+  border: 3px solid transparent;
+  color: white;
+}
+body .wrapper form button:hover i {
+  background: transparent;
+  color: white;
+}
+body .wrapper form i {
+  color: hsl(176, 54%, 29%);
+  margin-right: 10px;
+  background: transparent;
+}
+
+@media (min-width: 576px) {
+  body .wrapper form .popup {
+    width: 540px;
+  }
 }/*# sourceMappingURL=main.css.map */

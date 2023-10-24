@@ -5,6 +5,7 @@
 }
 
 body {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -15,31 +16,173 @@ body {
 		width: 500px;
 		box-shadow: 0 0 10px;
 		background-color: hsl(0, 0%, 100%);
-	}
-	form {
-		padding: 35px;
-		font-size: 16px;
-		h1 {
-			text-align: center;
-			margin-bottom: 20px;
-			color: hsl(176, 54%, 29%);
-		}
-		.form-box {
-			margin-bottom: 18px;
-			label {
-				display: inline-block;
-				margin-bottom: 6px;
-				i {
-					color: hsl(176, 54%, 29%);
+		margin: 15px;
+		border-radius: 5px;
+		form {
+			border: 2px solid rgb(149, 149, 149);
+			margin: 12px;
+			padding: 35px;
+			font-size: 16px;
+			border-radius: 5px;
+	
+			h1 {
+				position: relative;
+				padding: 0 32px;
+				text-align: center;
+				margin-bottom: 50px;
+				margin-top: 10px;
+				color: hsl(176, 54%, 29%);
+				.first-letter,
+				.last-letter {
+					position: relative;
+				}
+				.first-letter::after,
+				.last-letter::after {
+					position: absolute;
+					width: 10px;
+					height: 10px;
+					content: '';
+					background-color: hsl(158, 26%, 56%);
+					border-radius: 50%;
+					bottom: 16px;
+				}
+				.first-letter::after {
+					left: -32px;
+					
+				}
+				.last-letter::after {
+					right: -32px;
+		
 				}
 			}
-			input {
-				padding: 5px;
-				width: 90%;
-				margin-bottom: 6px;
-				border: none;
-				border-bottom: 2px solid hsl(176, 54%, 29%);
+	
+			.form-box {
+				margin-bottom: 18px;
+	
+				label {
+					display: inline-block;
+					margin-bottom: 6px;
+				}
+				input {
+					padding: 5px;
+					width: 90%;
+					margin-bottom: 6px;
+					font-size: 16px;
+					border: none;
+					border-bottom: 2px solid hsl(176, 54%, 29%);
+				}
+				input:focus {
+					outline: none;
+					box-shadow: 0 0 0 3px hsl(176, 54%, 29%, 25%);
+				}
+				.bug-text {
+					text-align: center;
+					font-size: 15px;
+					color: hsl(164, 83%, 14%);
+					visibility: hidden;
+				}
+			}
+			.form-box.bug input {
+				background-color: hsl(176, 54%, 29%, 15%);
+			}
+			.form-box.bug .bug-text {
+				visibility: visible;
+			}
+			.checkbox {
+				margin: 20px 0;
+	
+				.checkbox-text {
+					padding: 0 5px;
+					font-weight: bold;
+					color: hsl(240, 3%, 23%);
+				}
+				.bug-text {
+					text-align: center;
+					font-size: 15px;
+					color: hsl(164, 83%, 14%);
+					visibility: hidden;
+				}
+			}
+			.checkbox.bug .checkbox-text {
+				text-decoration: underline;
+				color: hsl(164, 83%, 14%);
+			}
+			.checkbox.bug .bug-text {
+				visibility: visible;
+			}
+			.buttons-box {
+				width: 100%;
+				height: 100px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.popup {
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				top: -300px;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				width: 370px;
+				height: 250px;
+				background-color: hsl(0, 0%, 100%);
+				border: 3px solid hsl(176, 54%, 29%);
+				box-shadow: 0 0 10px;
+				border-radius: 8px;
+				.confirm {
+					text-align: center;
+				}
+				.close-popup {
+					margin: 15px 0;
+				}
+			}
+			button {
+				padding: 8px 20px;
+				border-radius: 8px;
+				border: 3px solid hsl(158, 70%, 39%);
+				font-size: 16px;
+				background: none;
+				color: hsl(0, 0%, 1%);
+				cursor: pointer;
+				transition: background-color 0.5s;
+			}
+			button:focus {
+				outline: none;
+				box-shadow: 0 0 0 3px hsl(176, 54%, 29%, 25%);
+			}
+			button:hover {
+				background-color: hsla(158, 70%, 39%, 0.632);
+				border: 3px solid transparent;
+				color: white;
+			}
+			button:hover i {
+				background: transparent;
+				color: white;
+			}
+			i {
+				color: hsl(176, 54%, 29%);
+				margin-right: 10px;
+				background: transparent;
 			}
 		}
 	}
+	
+}
+
+@media (min-width: 576px) {
+	body{
+		.wrapper{
+			form {
+				.popup {
+					width: 540px;
+				}
+			}
+		}
+	}
+	
+	
+	
 }

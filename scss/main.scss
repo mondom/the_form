@@ -24,7 +24,7 @@ body {
 			padding: 35px;
 			font-size: 16px;
 			border-radius: 5px;
-	
+
 			h1 {
 				position: relative;
 				padding: 0 32px;
@@ -32,33 +32,11 @@ body {
 				margin-bottom: 50px;
 				margin-top: 10px;
 				color: hsl(176, 54%, 29%);
-				.first-letter,
-				.last-letter {
-					position: relative;
-				}
-				.first-letter::after,
-				.last-letter::after {
-					position: absolute;
-					width: 10px;
-					height: 10px;
-					content: '';
-					background-color: hsl(158, 26%, 56%);
-					border-radius: 50%;
-					bottom: 16px;
-				}
-				.first-letter::after {
-					left: -32px;
-					
-				}
-				.last-letter::after {
-					right: -32px;
-		
-				}
 			}
-	
+
 			.form-box {
 				margin-bottom: 18px;
-	
+
 				label {
 					display: inline-block;
 					margin-bottom: 6px;
@@ -90,7 +68,6 @@ body {
 			}
 			.checkbox {
 				margin: 20px 0;
-	
 				.checkbox-text {
 					padding: 0 5px;
 					font-weight: bold;
@@ -116,6 +93,9 @@ body {
 				display: flex;
 				justify-content: space-around;
 				align-items: center;
+				button {
+					margin: 0 5px;
+				}
 			}
 			.popup {
 				position: absolute;
@@ -125,19 +105,25 @@ body {
 				align-items: center;
 				top: -300px;
 				left: 50%;
-				transform: translate(-50%,-50%);
-				width: 370px;
+				transform: translate(-50%, -50%);
+				width: 320px;
 				height: 250px;
 				background-color: hsl(0, 0%, 100%);
 				border: 3px solid hsl(176, 54%, 29%);
 				box-shadow: 0 0 10px;
 				border-radius: 8px;
+				transition: top 0.6s;
 				.confirm {
 					text-align: center;
+					font-weight: bold;
 				}
 				.close-popup {
 					margin: 15px 0;
 				}
+				
+			}
+			.show-popup {
+				top: 300px;
 			}
 			button {
 				padding: 8px 20px;
@@ -169,20 +155,32 @@ body {
 			}
 		}
 	}
-	
 }
-
-@media (min-width: 576px) {
-	body{
-		.wrapper{
+@media (min-width: 375px) {
+	body {
+		.wrapper {
 			form {
 				.popup {
-					width: 540px;
+					width: 365px;
 				}
 			}
 		}
 	}
-	
-	
-	
+}
+
+@media (min-width: 568px) {
+	body {
+		.wrapper {
+			form {
+				.popup {
+					width: 540px;
+					
+				}
+				button{
+					width: 120px;
+					height: 50px;
+				}
+			}
+		}
+	}
 }

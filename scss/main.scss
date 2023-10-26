@@ -12,6 +12,7 @@ body {
 	min-height: 100vh;
 	font-family: 'Poppins', sans-serif;
 	background-color: hsl(149.3 80.4% 90%);
+	background: linear-gradient(360deg, hsl(176, 54%, 39%) 0%, hsl(149.3 80.4% 90%) 65%);
 	.wrapper {
 		width: 500px;
 		box-shadow: 0 0 10px;
@@ -42,6 +43,8 @@ body {
 					margin-bottom: 6px;
 				}
 				input {
+					display: block;
+					margin: 0 auto;
 					padding: 5px;
 					width: 90%;
 					margin-bottom: 6px;
@@ -56,7 +59,7 @@ body {
 				.bug-text {
 					text-align: center;
 					font-size: 15px;
-					color: hsl(164, 83%, 14%);
+					color: hsl(0, 86%, 28%);
 					visibility: hidden;
 				}
 			}
@@ -76,13 +79,13 @@ body {
 				.bug-text {
 					text-align: center;
 					font-size: 15px;
-					color: hsl(164, 83%, 14%);
+					color: hsl(0, 86%, 28%);
 					visibility: hidden;
 				}
 			}
 			.checkbox.bug .checkbox-text {
 				text-decoration: underline;
-				color: hsl(164, 83%, 14%);
+				color: hsl(0, 86%, 28%);
 			}
 			.checkbox.bug .bug-text {
 				visibility: visible;

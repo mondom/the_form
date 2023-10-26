@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   background-color: hsl(149.3, 80.4%, 90%);
+  background: linear-gradient(360deg, hsl(176, 54%, 39%) 0%, hsl(149.3, 80.4%, 90%) 65%);
 }
 body .wrapper {
   width: 500px;
@@ -43,6 +44,8 @@ body .wrapper form .form-box label {
   margin-bottom: 6px;
 }
 body .wrapper form .form-box input {
+  display: block;
+  margin: 0 auto;
   padding: 5px;
   width: 90%;
   margin-bottom: 6px;
@@ -57,7 +60,7 @@ body .wrapper form .form-box input:focus {
 body .wrapper form .form-box .bug-text {
   text-align: center;
   font-size: 15px;
-  color: hsl(164, 83%, 14%);
+  color: hsl(0, 86%, 28%);
   visibility: hidden;
 }
 body .wrapper form .form-box.bug input {
@@ -77,12 +80,12 @@ body .wrapper form .checkbox .checkbox-text {
 body .wrapper form .checkbox .bug-text {
   text-align: center;
   font-size: 15px;
-  color: hsl(164, 83%, 14%);
+  color: hsl(0, 86%, 28%);
   visibility: hidden;
 }
 body .wrapper form .checkbox.bug .checkbox-text {
   text-decoration: underline;
-  color: hsl(164, 83%, 14%);
+  color: hsl(0, 86%, 28%);
 }
 body .wrapper form .checkbox.bug .bug-text {
   visibility: visible;

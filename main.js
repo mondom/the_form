@@ -19,7 +19,7 @@ const showBugs = (input, info, checkbox) => {
     checkBox.classList.add('bug')
     errorInfo.textContent = info;
 }
-const clearBug = (input, checkbox)=> {
+const clearBugs = (input, checkbox)=> {
     const formBox = input.parentElement;
     const checkBox = checkbox.parentElement;
     formBox.classList.remove('bug')
@@ -31,7 +31,7 @@ const checkDataInput = input => {
 		if (el.value === '') {
 			showBugs(el, el.placeholder, regulationsCheckbox)
 		} else {
-			clearBug(el, regulationsCheckbox)
+			clearBugs(el, regulationsCheckbox)
 		}
 	})
 

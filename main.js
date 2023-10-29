@@ -9,34 +9,57 @@ const passwordInput = document.querySelector('#password')
 const passwordTwoInput = document.querySelector('#password-two')
 const regulationsCheckbox = document.querySelector('#regulations')
 
+const showInputsBugs = (input, info) => {
+	const formBox = input.parentElement
 
-const showBugs = (input, info, checkbox) => {
+	const errorInfo = formBox.querySelector('.bug-text')
+	formBox.classList.add('bug')
 
-    const formBox = input.parentElement;
-    const checkBox = checkbox.parentElement;
-    const errorInfo = formBox.querySelector('.bug-text')
-    formBox.classList.add('bug')
-    checkBox.classList.add('bug')
-    errorInfo.textContent = info;
+	errorInfo.textContent = info
 }
-const clearBugs = (input, checkbox)=> {
-    const formBox = input.parentElement;
-    const checkBox = checkbox.parentElement;
-    formBox.classList.remove('bug')
-    checkBox.classList.remove('bug')
+const showCheckboxBug = checkbox => {
+	const checkBox = checkbox.parentElement
+	checkBox.classList.add('bug')
+}
+const clearBugs = input => {
+	const formBox = input.parentElement
+	formBox.classList.remove('bug')
+}
+
+const clearCheckboxBug = checkbox => {
+	const checkBox = checkbox.parentElement
+	checkBox.classList.remove('bug')
 }
 
 const checkDataInput = input => {
 	input.forEach(el => {
 		if (el.value === '') {
-			showBugs(el, el.placeholder, regulationsCheckbox)
+			showInputsBugs(el, el.placeholder)
 		} else {
-			clearBugs(el, regulationsCheckbox)
+			clearBugs(el)
+	
 		}
 	})
 
-    if (regulationsCheckbox.checked === false) {
-		console.log('error')
+	if (regulationsCheckbox.checked === false) {
+		showCheckboxBug(regulationsCheckbox)
+	} else {
+		clearCheckboxBug(regulationsCheckbox)
+	}
+}
+
+const checkLength = (input, number) => {
+	if (input.value.length < number) {
+		showInputsBugs(
+			input,
+			`${input.previousElementSibling.innerText.slice(0, -1)} should consist of the ${number} characters.`
+		)
+	}
+}
+
+const checkPasswords = (pass1, pass2) => {
+	if (pass1.value !== pass2.value) {
+		showInputsBugs(pass2, `Passwords do not match`)
 	}
 }
 
@@ -45,16 +68,18 @@ let inputs = [usernameInput, mailInput, phoneInput, passwordInput, passwordTwoIn
 sendBtn.addEventListener('click', e => {
 	e.preventDefault()
 	checkDataInput(inputs)
+	checkLength(usernameInput, 5)
+	checkLength(passwordInput, 8)
+	checkPasswords(passwordInput, passwordTwoInput)
 })
-
-
 
 clearBtn.addEventListener('click', e => {
 	e.preventDefault()
 
 	inputs.forEach(el => {
 		el.value = ''
+		clearBugs(el)
 	})
-    regulationsCheckbox.checked = false
-	
+	regulationsCheckbox.checked = false
+	clearCheckboxBug(regulationsCheckbox)
 })

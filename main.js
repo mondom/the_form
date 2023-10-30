@@ -37,7 +37,6 @@ const checkDataInput = input => {
 			showInputsBugs(el, el.placeholder)
 		} else {
 			clearBugs(el)
-	
 		}
 	})
 
@@ -63,6 +62,26 @@ const checkPasswords = (pass1, pass2) => {
 	}
 }
 
+const checkMail = mail => {
+	const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+	if(regex.test(mail.value)){
+		clearBugs(mailInput)
+	} else {
+		showInputsBugs(mailInput, `The email is incorrect`)
+	}
+}
+
+const checkPhone = phone => {
+	const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+
+	if(regex.test(phone.value)){
+		clearBugs(phoneInput)
+	} else {
+		showInputsBugs(phoneInput, `The phone number is incorrect`)
+	}
+}
+
 let inputs = [usernameInput, mailInput, phoneInput, passwordInput, passwordTwoInput]
 
 sendBtn.addEventListener('click', e => {
@@ -71,6 +90,8 @@ sendBtn.addEventListener('click', e => {
 	checkLength(usernameInput, 5)
 	checkLength(passwordInput, 8)
 	checkPasswords(passwordInput, passwordTwoInput)
+	checkMail(mailInput)
+	checkPhone(phoneInput)
 })
 
 clearBtn.addEventListener('click', e => {

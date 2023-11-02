@@ -8,6 +8,8 @@ const phoneInput = document.querySelector('#phone')
 const passwordInput = document.querySelector('#password')
 const passwordTwoInput = document.querySelector('#password-two')
 const regulationsCheckbox = document.querySelector('#regulations')
+const boxes = document.querySelectorAll('.form-box')
+const checkBoxBox = document.querySelector('.checkbox')
 
 const showInputsBugs = (input, info) => {
 	const formBox = input.parentElement
@@ -82,6 +84,24 @@ const checkPhone = phone => {
 	}
 }
 
+const sendCorrectForm = () => {
+	let countBugs = 0
+	if(checkBoxBox.classList.contains('bug')){
+		countBugs++
+	}
+
+	boxes.forEach(el => {
+		if(el.classList.contains('bug')){
+			countBugs++
+		}
+	})
+	
+	if(countBugs === 0){
+		popup.classList.add('show-popup')
+	}
+}
+ 
+
 let inputs = [usernameInput, mailInput, phoneInput, passwordInput, passwordTwoInput]
 
 sendBtn.addEventListener('click', e => {
@@ -92,6 +112,7 @@ sendBtn.addEventListener('click', e => {
 	checkPasswords(passwordInput, passwordTwoInput)
 	checkMail(mailInput)
 	checkPhone(phoneInput)
+	sendCorrectForm()
 })
 
 clearBtn.addEventListener('click', e => {

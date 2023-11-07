@@ -1,118 +1,109 @@
-const clearBtn = document.querySelector('.clear')
-const sendBtn = document.querySelector('.send')
-const closeBtn = document.querySelector('.close-popup')
-const popup = document.querySelector('.popup')
-const usernameInput = document.querySelector('#username')
+const userInput = document.querySelector('#username')
 const mailInput = document.querySelector('#mail')
 const phoneInput = document.querySelector('#phone')
-const passwordInput = document.querySelector('#password')
-const passwordTwoInput = document.querySelector('#password-two')
-const regulationsCheckbox = document.querySelector('#regulations')
-const boxes = document.querySelectorAll('.form-box')
-const checkBoxBox = document.querySelector('.checkbox')
+const passInput = document.querySelector('#password')
+const pass2Input = document.querySelector('#password-two')
+const checkbox = document.querySelector('#regulations')
+const checkboxBox = checkbox.parentElement
+const clearBtn = document.querySelector('.clear')
+const sendBtn = document.querySelector('.send')
+const bugInfo = document.querySelector('.bug-text')
+const popup = document.querySelector('.popup')
 
-const showInputsBugs = (input, info) => {
-	const formBox = input.parentElement
+let inputs = [userInput, mailInput, phoneInput, passInput, pass2Input]
 
-	const errorInfo = formBox.querySelector('.bug-text')
-	formBox.classList.add('bug')
-
-	errorInfo.textContent = info
+const showInputBug = (input, info) => {
+	const dataBox = input.parentElement
+	const text = dataBox.querySelector('.bug-text')
+	dataBox.classList.add('bug')
+	text.textContent = info
 }
-const showCheckboxBug = checkbox => {
-	const checkBox = checkbox.parentElement
-	checkBox.classList.add('bug')
-}
-const clearBugs = input => {
-	const formBox = input.parentElement
-	formBox.classList.remove('bug')
-}
-
-const clearCheckboxBug = checkbox => {
-	const checkBox = checkbox.parentElement
-	checkBox.classList.remove('bug')
+const showCheckboxBug = () => {
+	const checkboxBox = checkbox.parentElement
+	checkboxBox.classList.add('bug')
 }
 
-const checkDataInput = input => {
+const clearInputBug = input => {
+	const dataBox = input.parentElement
+	dataBox.classList.remove('bug')
+}
+
+const clearCheckboxBug = () => {
+	checkboxBox.classList.remove('bug')
+}
+
+const checkNumOfChart = (input, number) => {
+	if (input.value.length < number) {
+		showInputBug(input, `${input.previousElementSibling.textContent} should have ${number} characters`)
+	}
+}
+
+const checkPasswords = (firstPass, secondPass) => {
+	if (firstPass.value !== secondPass.value) {
+		showInputBug(secondPass, `Passwords do not match!`)
+	}
+}
+
+const checkMail = () => {
+	const regex =
+		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+	if (regex.test(mailInput.value)) {
+		clearInputBug(mailInput)
+	} else {
+		showInputBug(mailInput, `Email address is incorrect`)
+	}
+}
+const checkPhone = () => {
+	const regex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+
+	if (regex.test(phoneInput.value)) {
+		clearInputBug(phoneInput)
+	} else {
+		showInputBug(phoneInput, `Phone number is incorrect`)
+	}
+}
+
+const checkForm = input => {
 	input.forEach(el => {
 		if (el.value === '') {
-			showInputsBugs(el, el.placeholder)
+			showInputBug(el, el.placeholder)
 		} else {
-			clearBugs(el)
+			clearInputBug(el)
 		}
 	})
 
-	if (regulationsCheckbox.checked === false) {
-		showCheckboxBug(regulationsCheckbox)
+	if (checkbox.checked === false) {
+		showCheckboxBug()
 	} else {
-		clearCheckboxBug(regulationsCheckbox)
+		clearCheckboxBug()
 	}
 }
 
-const checkLength = (input, number) => {
-	if (input.value.length < number) {
-		showInputsBugs(
-			input,
-			`${input.previousElementSibling.innerText.slice(0, -1)} should consist of the ${number} characters.`
-		)
-	}
-}
+const sendForm = () => {
+	const dataBoxes = document.querySelectorAll('.data-box')
+	let bugs = 0
 
-const checkPasswords = (pass1, pass2) => {
-	if (pass1.value !== pass2.value) {
-		showInputsBugs(pass2, `Passwords do not match`)
-	}
-}
-
-const checkMail = mail => {
-	const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-	if(regex.test(mail.value)){
-		clearBugs(mailInput)
-	} else {
-		showInputsBugs(mailInput, `The email is incorrect`)
-	}
-}
-
-const checkPhone = phone => {
-	const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
-
-	if(regex.test(phone.value)){
-		clearBugs(phoneInput)
-	} else {
-		showInputsBugs(phoneInput, `The phone number is incorrect`)
-	}
-}
-
-const sendCorrectForm = () => {
-	let countBugs = 0
-	if(checkBoxBox.classList.contains('bug')){
-		countBugs++
-	}
-
-	boxes.forEach(el => {
-		if(el.classList.contains('bug')){
-			countBugs++
+	dataBoxes.forEach(box => {
+		if (box.classList.contains('bug') || checkbox.checked === false) {
+			bugs++
 		}
 	})
-	
-	if(countBugs === 0){
-		popup.classList.add('show-popup')
+
+	if (bugs++ === 0) {
+		popup.classList.add('active-popup')
 	}
 }
- 
-
-let inputs = [usernameInput, mailInput, phoneInput, passwordInput, passwordTwoInput]
 
 sendBtn.addEventListener('click', e => {
 	e.preventDefault()
-	checkDataInput(inputs)
-	checkLength(usernameInput, 5)
-	checkLength(passwordInput, 8)
-	checkPasswords(passwordInput, passwordTwoInput)
-	checkMail(mailInput)
-	checkPhone(phoneInput)
-	sendCorrectForm()
+	checkForm(inputs)
+	checkNumOfChart(userInput, 4)
+	checkNumOfChart(passInput, 8)
+	checkPasswords(passInput, pass2Input)
+	checkMail()
+	checkPhone()
+	sendForm()
 })
 
 clearBtn.addEventListener('click', e => {
@@ -120,8 +111,9 @@ clearBtn.addEventListener('click', e => {
 
 	inputs.forEach(el => {
 		el.value = ''
-		clearBugs(el)
+		clearInputBug(el)
 	})
-	regulationsCheckbox.checked = false
-	clearCheckboxBug(regulationsCheckbox)
+
+	clearCheckboxBug()
+	checkbox.checked = false
 })

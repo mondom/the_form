@@ -11,12 +11,14 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Poppins', sans-serif;
-	background-color: hsl(149.3 80.4% 90%);
-	background: linear-gradient(360deg, hsl(176, 54%, 39%) 0%, hsl(149.3 80.4% 90%) 65%);
+	background-color: rgb(199, 255, 236);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23C8FFED' stroke-width='0.2' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(27.45) translate(-963.57 -722.68)'%3E%3Cuse fill='%23c6fceb' href='%23s' y='2'/%3E%3Cuse fill='%23c6fceb' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23c4fae8' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23c4fae8' href='%23s'/%3E%3Cuse fill='%23c2f7e6' href='%23s' x='2'/%3E%3Cuse fill='%23c2f7e6' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(27.45) translate(-963.57 -722.68)'%3E%3Cg fill='%23c0f5e3'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(27.45) translate(-963.57 -722.68)'%3E%3Cg fill='%23c0f5e3'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(27.45) translate(-963.57 -722.68)'%3E%3Cg fill='%23bef2e1'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(27.45) translate(-963.57 -722.68)'%3E%3Cg fill='%23C8FFED'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23bcefde'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(27.45) translate(-963.57 -722.68)'%3E%3Cg fill='%2396FFD5'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(27.45) translate(-963.57 -722.68)'%3E%3Cg fill='%2396FFD5'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(27.45) translate(-963.57 -722.68)'%3E%3Cg fill='%2396FFD5'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
 	.wrapper {
 		width: 500px;
 		box-shadow: 0 0 10px;
-		background-color: hsl(0, 0%, 100%);
+		background-color: rgb(255, 255, 255);
 		margin: 15px;
 		border-radius: 5px;
 		form {
@@ -27,15 +29,16 @@ body {
 			border-radius: 5px;
 
 			h1 {
+				font-family: 'Patrick Hand', cursive;
 				position: relative;
 				padding: 0 32px;
 				text-align: center;
 				margin-bottom: 50px;
 				margin-top: 10px;
-				color: hsl(176, 54%, 29%);
+				color: rgb(33, 115, 109);
 			}
 
-			.form-box {
+			.data-box {
 				margin-bottom: 18px;
 
 				label {
@@ -50,11 +53,11 @@ body {
 					margin-bottom: 6px;
 					font-size: 16px;
 					border: none;
-					border-bottom: 2px solid hsl(176, 54%, 29%);
+					border-bottom: 2px solid rgb(33, 115, 109);
 				}
 				input:focus {
 					outline: none;
-					box-shadow: 0 0 0 3px hsl(176, 54%, 29%, 25%);
+					box-shadow: 0 0 0 3px rgba(34, 114, 109, 0.25);
 				}
 				.bug-text {
 					text-align: center;
@@ -63,10 +66,10 @@ body {
 					visibility: hidden;
 				}
 			}
-			.form-box.bug input {
-				background-color: hsl(176, 54%, 29%, 15%);
+			.data-box.bug input {
+				background-color: rgba(46, 122, 117, 0.15);
 			}
-			.form-box.bug .bug-text {
+			.data-box.bug .bug-text {
 				visibility: visible;
 			}
 			.checkbox {
@@ -74,18 +77,18 @@ body {
 				.checkbox-text {
 					padding: 0 5px;
 					font-weight: bold;
-					color: hsl(240, 3%, 23%);
+					color: rgb(57, 57, 60);
 				}
 				.bug-text {
-					text-align: center;
+					padding-left: 23px;
 					font-size: 15px;
-					color: hsl(0, 86%, 28%);
+					color: rgb(133, 10, 10);
 					visibility: hidden;
 				}
 			}
 			.checkbox.bug .checkbox-text {
 				text-decoration: underline;
-				color: hsl(0, 86%, 28%);
+				color: rgb(133, 10, 10);
 			}
 			.checkbox.bug .bug-text {
 				visibility: visible;
@@ -102,63 +105,92 @@ body {
 			}
 			.popup {
 				position: absolute;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				top: -300px;
+				top: 330px;
 				left: 50%;
 				transform: translate(-50%, -50%);
-				width: 320px;
-				height: 250px;
-				background-color: hsl(0, 0%, 100%);
-				border: 3px solid hsl(176, 54%, 29%);
+				width: 0;
+				height: 0;
+				background-color: rgb(255, 255, 255);
+				
 				box-shadow: 0 0 10px;
 				border-radius: 8px;
 				transition: top 0.6s;
-				.confirm {
-					text-align: center;
-					font-weight: bold;
-				}
-				.close-popup {
-					margin: 15px 0;
+				.popup-wrapper {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					opacity: 0;
+					.confirm {
+						text-align: center;
+						font-weight: bold;
+					}
+					.close-popup {
+						margin: 15px 0;
+					}
+				
 				}
 				
 			}
-			.show-popup {
-				top: 300px;
+			.active-popup {
+				animation: popup 1.5s ease-in-out forwards;
+			
+				.popup-wrapper {
+					opacity: 1;
+					transition: all 0.3s ease-in-out 1.5s;
+				}
 			}
+
 			button {
 				padding: 8px 20px;
 				border-radius: 8px;
-				border: 3px solid hsl(158, 70%, 39%);
+				border: 3px solid rgb(30, 169, 118);
 				font-size: 16px;
 				background: none;
-				color: hsl(0, 0%, 1%);
+				color: rgb(3, 3, 3);
 				cursor: pointer;
 				transition: background-color 0.5s;
 			}
 			button:focus {
 				outline: none;
-				box-shadow: 0 0 0 3px hsl(176, 54%, 29%, 25%);
+				box-shadow: 0 0 0 3px rgba(34, 114, 109, 0.25);
 			}
 			button:hover {
-				background-color: hsla(158, 70%, 39%, 0.632);
+				background-color: rgba(30, 169, 118, 0.632);
 				border: 3px solid transparent;
-				color: white;
+				color: rgb(255, 255, 255);
 			}
 			button:hover i {
 				background: transparent;
-				color: white;
+				color: rgb(255, 255, 255);
 			}
 			i {
-				color: hsl(176, 54%, 29%);
+				color: rgb(34, 114, 109);
 				margin-right: 10px;
 				background: transparent;
 			}
 		}
 	}
 }
+
+@keyframes popup {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	50% {
+		width: 640px;
+		height: 2px;
+		
+	}
+	100% {
+		width: 640px;
+		height: 370px;
+	}
+}
+
 @media (min-width: 375px) {
 	body {
 		.wrapper {
@@ -177,9 +209,8 @@ body {
 			form {
 				.popup {
 					width: 540px;
-					
 				}
-				button{
+				button {
 					width: 120px;
 					height: 50px;
 				}

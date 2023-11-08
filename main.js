@@ -9,6 +9,8 @@ const clearBtn = document.querySelector('.clear')
 const sendBtn = document.querySelector('.send')
 const bugInfo = document.querySelector('.bug-text')
 const popup = document.querySelector('.popup')
+const eyeOne = document.querySelector('.fa-eye-one')
+const eyeTwo = document.querySelector('.fa-eye-two')
 
 let inputs = [userInput, mailInput, phoneInput, passInput, pass2Input]
 
@@ -94,6 +96,32 @@ const sendForm = () => {
 		popup.classList.add('active-popup')
 	}
 }
+
+eyeOne.addEventListener('click', () => {
+	if (passInput.type == 'password') {
+		passInput.type = 'text'
+		eyeOne.classList.add('fa-eye-slash')
+		eyeOne.classList.remove('fa-eye')
+	} else {
+		passInput.type = 'password'
+		eyeOne.classList.remove('fa-eye-slash')
+		eyeOne.classList.add('fa-eye')
+	}
+})
+
+eyeTwo.addEventListener('click', () => {
+	if (pass2Input.type == 'password') {
+		pass2Input.type = 'text'
+		eyeTwo.classList.add('fa-eye-slash')
+		eyeTwo.classList.remove('fa-eye')
+	} else {
+		pass2Input.type = 'password'
+		eyeTwo.classList.remove('fa-eye-slash')
+		eyeTwo.classList.add('fa-eye')
+	}
+})
+
+
 
 sendBtn.addEventListener('click', e => {
 	e.preventDefault()

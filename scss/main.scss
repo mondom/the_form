@@ -40,6 +40,10 @@ body {
 
 			.data-box {
 				margin-bottom: 18px;
+				#phone::-webkit-inner-spin-button,
+				#phone::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+				}
 
 				label {
 					display: inline-block;
@@ -64,6 +68,23 @@ body {
 					font-size: 15px;
 					color: hsl(0, 86%, 28%);
 					visibility: hidden;
+				}
+				.pass-container {
+					width: 100%;
+					position: relative;
+					.fa-eye,
+					.fa-eye-slash {
+						position: absolute;
+						top: 0;
+						right: 13px;
+						font-size: 18px;
+						padding: 5px;
+						cursor: pointer;
+					}
+					.fa-eye:hover,
+					.fa-eye-slash:hover {
+						color: rgb(30, 169, 118);
+					}
 				}
 			}
 			.data-box.bug input {
@@ -111,7 +132,7 @@ body {
 				width: 0;
 				height: 0;
 				background-color: rgb(255, 255, 255);
-				
+
 				box-shadow: 0 0 10px;
 				border-radius: 8px;
 				transition: top 0.6s;
@@ -130,13 +151,11 @@ body {
 					.close-popup {
 						margin: 15px 0;
 					}
-				
 				}
-				
 			}
 			.active-popup {
 				animation: popup 1.5s ease-in-out forwards;
-			
+
 				.popup-wrapper {
 					opacity: 1;
 					transition: all 0.3s ease-in-out 1.5s;
@@ -183,7 +202,6 @@ body {
 	50% {
 		width: 640px;
 		height: 2px;
-		
 	}
 	100% {
 		width: 640px;

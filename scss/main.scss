@@ -69,22 +69,23 @@ body {
 					color: hsl(0, 86%, 28%);
 					visibility: hidden;
 				}
-				.pass-container {
-					width: 100%;
-					position: relative;
-					.fa-eye,
-					.fa-eye-slash {
-						position: absolute;
-						top: 0;
-						right: 13px;
-						font-size: 18px;
-						padding: 5px;
-						cursor: pointer;
-					}
-					.fa-eye:hover,
-					.fa-eye-slash:hover {
-						color: rgb(30, 169, 118);
-					}
+				
+			}
+			.pass-container {
+				width: 100%;
+				position: relative;
+				.fa-eye,
+				.fa-eye-slash {
+					position: absolute;
+					top: 25px;
+					right: 13px;
+					font-size: 18px;
+					padding: 5px;
+					cursor: pointer;
+				}
+				.fa-eye:hover,
+				.fa-eye-slash:hover {
+					color: rgb(30, 169, 118);
 				}
 			}
 			.data-box.bug input {

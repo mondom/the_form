@@ -19,6 +19,7 @@ const showInputBug = (input, info) => {
 	const text = dataBox.querySelector('.bug-text')
 	dataBox.classList.add('bug')
 	text.textContent = info
+	console.log(text.textContent);
 }
 const showCheckboxBug = () => {
 	const checkboxBox = checkbox.parentElement

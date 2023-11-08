@@ -70,21 +70,21 @@ body .wrapper form .data-box .bug-text {
   color: hsl(0, 86%, 28%);
   visibility: hidden;
 }
-body .wrapper form .data-box .pass-container {
+body .wrapper form .pass-container {
   width: 100%;
   position: relative;
 }
-body .wrapper form .data-box .pass-container .fa-eye,
-body .wrapper form .data-box .pass-container .fa-eye-slash {
+body .wrapper form .pass-container .fa-eye,
+body .wrapper form .pass-container .fa-eye-slash {
   position: absolute;
-  top: 0;
+  top: 25px;
   right: 13px;
   font-size: 18px;
   padding: 5px;
   cursor: pointer;
 }
-body .wrapper form .data-box .pass-container .fa-eye:hover,
-body .wrapper form .data-box .pass-container .fa-eye-slash:hover {
+body .wrapper form .pass-container .fa-eye:hover,
+body .wrapper form .pass-container .fa-eye-slash:hover {
   color: rgb(30, 169, 118);
 }
 body .wrapper form .data-box.bug input {

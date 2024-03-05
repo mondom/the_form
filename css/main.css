@@ -191,6 +191,7 @@ body .wrapper form i {
 body .link {
   height: 25px;
   margin: 10px;
+  background-color: red;
 }
 body .link a {
   text-decoration: none;

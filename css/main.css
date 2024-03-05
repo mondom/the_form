@@ -28,6 +28,7 @@ body .wrapper form {
   padding: 35px;
   font-size: 16px;
   border-radius: 5px;
+  max-height: 90%;
 }
 body .wrapper form h1 {
   font-family: "Patrick Hand", cursive;
@@ -160,6 +161,8 @@ body .wrapper form .active-popup .popup-wrapper {
 }
 body .wrapper form button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 25px;
   border-radius: 8px;
   border: 3px solid rgb(30, 169, 118);

@@ -29,6 +29,7 @@ body {
 			padding: 35px;
 			font-size: 16px;
 			border-radius: 5px;
+			max-height: 90%;
 			// background-color: green;
 
 			h1 {
@@ -167,6 +168,8 @@ body {
 
 			button {
 				display: flex;
+				justify-content: center;
+				align-items: center;
 				padding: 10px 25px;
 				border-radius: 8px;
 				border: 3px solid rgb(30, 169, 118);

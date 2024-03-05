@@ -19,6 +19,7 @@ body {
 }
 body .wrapper {
   width: 500px;
+  max-height: 90vh;
   box-shadow: 0 0 10px;
   background-color: rgb(255, 255, 255);
   margin: 45px;
@@ -191,7 +192,6 @@ body .wrapper form i {
 body .link {
   height: 25px;
   margin: 10px;
-  background-color: red;
 }
 body .link a {
   text-decoration: none;

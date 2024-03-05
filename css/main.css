@@ -28,7 +28,6 @@ body .wrapper form {
   padding: 35px;
   font-size: 16px;
   border-radius: 5px;
-  max-height: 90%;
 }
 body .wrapper form h1 {
   font-family: "Patrick Hand", cursive;
@@ -116,7 +115,7 @@ body .wrapper form .checkbox.bug .bug-text {
 }
 body .wrapper form .buttons-box {
   width: 100%;
-  height: 100px;
+  padding: 10px 0 20px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -227,7 +226,6 @@ body .link a {
 @media (min-width: 568px) {
   body .wrapper {
     max-width: 540px;
-    max-height: 90vh;
   }
   body .wrapper form .popup {
     width: 540px;

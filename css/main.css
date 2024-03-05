@@ -227,6 +227,7 @@ body .link a {
 @media (min-width: 568px) {
   body .wrapper {
     max-width: 540px;
+    max-height: 90vh;
   }
   body .wrapper form .popup {
     width: 540px;

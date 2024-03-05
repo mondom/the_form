@@ -18,7 +18,7 @@ body {
 	background-size: cover;
 	.wrapper {
 		width: 500px;
-		max-height: 90vh;
+
 		box-shadow: 0 0 10px;
 		background-color: rgb(255, 255, 255);
 		margin: 45px;
@@ -195,7 +195,6 @@ body {
 		}
 	}
 	.link {
-		position: absolute;
 		bottom: 10px;
 		a {
 			text-decoration: none;

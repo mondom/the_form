@@ -19,7 +19,6 @@ body {
 }
 body .wrapper {
   width: 500px;
-  max-height: 90vh;
   box-shadow: 0 0 10px;
   background-color: rgb(255, 255, 255);
   margin: 45px;
@@ -190,7 +189,6 @@ body .wrapper form i {
   background: transparent;
 }
 body .link {
-  position: absolute;
   bottom: 10px;
 }
 body .link a {
